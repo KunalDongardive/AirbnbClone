@@ -1,0 +1,353 @@
+.home {
+  height: auto;
+  width: 100%;
+}
+
+.home .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  position: sticky;
+  background-color: #ffffff;
+  top: 0;
+  border-bottom: 1px solid rgb(228, 226, 226);
+  padding: 0px 50px 10px 80px;
+}
+
+.home .header .logo img {
+  height: 2.8rem;
+}
+
+.home .header .searchItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.5rem 0.4rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 3rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.home .header .searchItem:hover {
+  box-shadow: 0 1px 2px rgb(0 0 0 / 15%), 0 4px 12px rgb(0 0 0 / 10%);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.home .header .searchItem .searchItem-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-right: 1px solid #ddd;
+  padding-right: 1rem;
+}
+.home .header .searchItem .searchItem-text2 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #717171;
+  padding-right: 0.5rem;
+}
+
+.home .header .searchItem .searchIcon {
+  display: flex;
+  background-color: #ff385c;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: white;
+}
+
+.home .header .profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.home .header .profile > * {
+  margin: 0rem 0.5rem;
+}
+
+.home .header .profile .host {
+  padding: 0rem 0.3rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.home .header .profile .host:hover {
+  background-color: #f7f7f7;
+  padding: 0.5rem 0.5rem;
+}
+
+.home .header .profile .dropDown {
+  border-radius: 50px;
+  border: 1px solid rgb(221, 220, 220);
+  padding: 0.7rem 0.5rem;
+  display: flex;
+}
+
+.home .header .profile .dropDown > * {
+  margin: 0px 8px;
+  font-size: 17px;
+}
+
+.home .header .profile .dropDown:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.home .header .profile .drop {
+  height: 9.5rem;
+  width: 12rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  position: absolute;
+  right: 0%;
+  top: 4rem;
+  line-height: 2;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.5rem 0rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.home .header .profile .drop .dLine {
+  height: 1px;
+  background-color: #ddd;
+  width: 100%;
+  margin: 0.3rem 0rem;
+}
+
+.home .header .profile .drop .dropItem {
+  padding: 0.1rem 1rem;
+}
+
+.home .header .profile .drop .dropItem:hover {
+  background-color: #ddd;
+}
+
+@media only screen and (max-width: 800px) {
+  .search-bar,
+  .host {
+    display: none;
+  }
+
+  .header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  /* 
+  .menu-icon {
+    position: fixed;
+    top: 0.5rem;
+    right: 1.5rem;
+  } */
+
+  .navigation {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #ddd;
+  }
+}
+
+/* Header styles done here */
+/* Destination Bar styles starts form here */
+
+.home .destinationBar {
+  padding: 10px 60px 5px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .home .destinationBar .destComp {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+} */
+
+.home .destinationBar .places {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  opacity: 0.5;
+  min-width: 70px;
+  overflow-x: auto;
+}
+
+.home .destinationBar .places:hover {
+  opacity: 1;
+  border-bottom: 1px solid black;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.home .destinationBar .selected-place {
+  opacity: 1;
+  border-bottom: 1px solid black;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.home .destinationBar .places .placeImg {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.home .destinationBar .places .placeLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.selected-label {
+  color: black;
+}
+
+@media only screen and (max-width: 800px) {
+  .destComp {
+    padding: 0.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+.home .destinationBar button {
+  background-color: inherit;
+  border: none;
+  font-size: 20px;
+}
+
+.home .destinationBar .filters button {
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+/* Destination bar styles ends here */
+/* Destination Label style starts here */
+
+.home .destinationLabel {
+  padding: 10px 60px 5px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.home .destinationLabel button {
+  color: white;
+  background-color: black;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.home .destinationLabel h4 {
+  font-size: larger;
+}
+
+.home .destinationLabel .destLabel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.home .destinationLabel .destLabel .destinationView {
+  height: 350px;
+  width: 250px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.home .destinationLabel .destLabel .destinationView .images {
+  display: flex;
+}
+
+.home .destinationLabel .destLabel .destinationView .favIcon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.home .destinationLabel .destLabel .destinationView .favIcon .icon {
+  fill: rgb(250, 246, 246);
+  font-size: 20px;
+}
+
+.home .destinationLabel .destLabel .destinationView .images img {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.home .destinationLabel .destLabel .destinationView .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 2px;
+}
+
+.home .destinationLabel .destLabel .destinationView .title .rating {
+  display: flex;
+  align-items: center;
+}
+
+.home .destinationLabel .destLabel .destinationView .type {
+  color: grey;
+  padding: 2px 2px;
+}
+
+.home .destinationLabel .destLabel .destinationView .date {
+  color: grey;
+  padding: 2px 2px;
+}
+
+.home .destinationLabel .destLabel .destinationView .price {
+  padding: 2px 2px;
+}
+
+/* Destination Label style ends here */
+/* Footer style starting point */
+
+.footer {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 80px;
+  border-top: 1px solid rgb(228, 228, 228);
+}
+
+.footer .left {
+  display: flex;
+  align-items: center;
+}
+
+.footer .left > * {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.footer .right {
+  display: flex;
+  align-items: center;
+}
+
+.footer .right > * {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+/* Footer style ends here */
