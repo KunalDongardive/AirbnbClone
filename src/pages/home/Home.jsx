@@ -15,6 +15,7 @@ import { useState } from "react";
 import { links } from "./images";
 import "./home.css";
 import Swiper from "../../components/swiper/Swiper";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [isShown, setIsShown] = useState(false);
@@ -30,7 +31,9 @@ const Home = () => {
     <div className="home">
       <div className="header">
         <div className="logo">
-          <img src="./images/Airbnb-logo.jpeg" alt="" />
+          <Link to="/">
+            <img src="./images/Airbnb-logo.jpeg" alt="" />
+          </Link>
         </div>
         <div className="searchItem">
           <div className="searchItem-text">Anywhere</div>
@@ -95,9 +98,11 @@ const Home = () => {
       <div className="destinationLabel">
         <div className="destLabel">
           <div className="destinationView">
-            <div className="images">
-              <Swiper />
-            </div>
+            <Link to="/destination">
+              <div className="images">
+                <Swiper />
+              </div>
+            </Link>
             <div className="favIcon">
               <FontAwesomeIcon icon={faHeart} className="icon" />
             </div>
