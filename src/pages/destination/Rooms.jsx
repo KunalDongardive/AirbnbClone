@@ -41,17 +41,20 @@ import {
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faSquareTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const Rooms = () => {
   return (
     <div className="rooms">
       <div className="header">
         <div className="logo">
-          <img
-            src="./images/Airbnb_Logo.png"
-            alt=""
-            style={{ height: "35px", width: "150px", objectFit: "contain" }}
-          />
+          <Link to="/">
+            <img
+              src="./images/Airbnb_Logo.png"
+              alt=""
+              style={{ height: "35px", width: "150px", objectFit: "contain" }}
+            />
+          </Link>
         </div>
         <div className="searchBar">
           <input type="text" placeholder="Start your search" />

@@ -31,9 +31,7 @@ const Home = () => {
     <div className="home">
       <div className="header">
         <div className="logo">
-          <Link to="/">
-            <img src="./images/Airbnb-logo.jpeg" alt="" />
-          </Link>
+          <img src="./images/Airbnb-logo.jpeg" alt="" />
         </div>
         <div className="searchItem">
           <div className="searchItem-text">Anywhere</div>

@@ -13,7 +13,6 @@
   top: 0;
   border-bottom: 1px solid rgb(228, 226, 226);
   padding: 0px 50px 10px 80px;
-  cursor: pointer;
 }
 
 .home .header .logo img {
@@ -28,6 +27,7 @@
   border: 1px solid #ddd;
   border-radius: 3rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
 }
 
 .home .header .searchItem:hover {
@@ -234,10 +234,11 @@
 
 .home .destinationLabel {
   padding: 10px 60px 5px 70px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center; */
+  /* padding: 0px 50px 0px 80px; */
 }
 
 .home .destinationLabel button {
@@ -256,16 +257,16 @@
 }
 
 .home .destinationLabel .destLabel {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
 }
 
 .home .destinationLabel .destLabel .destinationView {
-  height: 350px;
-  width: 250px;
-  position: relative;
+  height: 330px;
+  width: 270px;
   margin-top: 10px;
+  position: relative;
 }
 
 .home .destinationLabel .destLabel .destinationView .images {
@@ -285,7 +286,7 @@
 
 .home .destinationLabel .destLabel .destinationView .images img {
   height: 250px;
-  width: 250px;
+  width: 100%;
   object-fit: cover;
   border-radius: 20px;
 }
