@@ -38,3 +38,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+.swiper-pagination{
+  font-size: 15px;
+}
