@@ -1,21 +1,3 @@
-/* #app {
-  height: 100%;
-}
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-} */
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -25,13 +7,12 @@ body {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
 }
- 
+
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -39,6 +20,66 @@ body {
   object-fit: cover;
 }
 
-.swiper-pagination{
+/* Styling individual pagination bullets */
+.swiper .swiper-pagination-bullet {
+  background: #b4b3b3;
+  opacity: 1;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px;
+  transition: background 0.3s ease;
+}
+
+/* Styling the active pagination bullet */
+.swiper .swiper-pagination-bullet-active {
+  background: #ffffff;
+  transform: scale(1.2);
+}
+
+/* Styling the next button */
+.swiper .swiper-button-next {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.462);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.swiper .swiper-button-next:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Styling the previous button */
+.swiper .swiper-button-prev {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.462);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  transition: background-color 0.5s ease;
+}
+
+.swiper .swiper-button-prev:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
   font-size: 15px;
+}
+
+/* Positioning the buttons */
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  top: 50%;
+  transform: translateY(30%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show the navigation buttons when hovering over the Swiper container */
+.swiper:hover .swiper-button-next,
+.swiper:hover .swiper-button-prev {
+  opacity: 1;
 }

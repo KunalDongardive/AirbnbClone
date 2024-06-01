@@ -62,9 +62,6 @@ const Home = () => {
         </div>
       </div>
       <div className="destinationBar">
-        {/* <button>
-          <FontAwesomeIcon icon={faCircleArrowLeft} className="icon" />
-        </button> */}
         {links.map((item, i) => (
           <div
             key={i}
@@ -84,9 +81,6 @@ const Home = () => {
             </p>
           </div>
         ))}
-        {/* <button>
-          <FontAwesomeIcon icon={faCircleArrowRight} className="icon" />
-        </button> */}
         <div className="filters">
           <button className="destButton">
             <FontAwesomeIcon icon={faFilter} /> &nbsp; Filters

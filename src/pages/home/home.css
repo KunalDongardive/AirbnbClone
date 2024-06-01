@@ -269,14 +269,10 @@
   position: relative;
 }
 
-.home .destinationLabel .destLabel .destinationView .images {
-  display: flex;
-}
-
 .home .destinationLabel .destLabel .destinationView .favIcon {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  right: 10%;
+  top: 10%;
 }
 
 .home .destinationLabel .destLabel .destinationView .favIcon .icon {
