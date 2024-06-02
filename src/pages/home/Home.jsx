@@ -126,7 +126,7 @@ const Home = () => {
             <div className="type">Mountain views</div>
             <div className="date">11-16 Apr</div>
             <div className="price">32,524 night</div>
-          </div>{" "}
+          </div>
           <div className="destinationView">
             <div className="images">
               <Swiper />

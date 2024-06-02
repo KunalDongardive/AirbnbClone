@@ -42,8 +42,17 @@ import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faSquareTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Rooms = () => {
+  const [isShown, setIsShown] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+    setIsShown(!isShown);
+  };
+
   return (
     <div className="rooms">
       <div className="header">
@@ -66,10 +75,19 @@ const Rooms = () => {
             <FontAwesomeIcon icon={faLanguage} className="icon" />
           </div>
           &nbsp;
-          <div className="menuIcon">
-            <FontAwesomeIcon icon={faBars} className="icon" />
-            <FontAwesomeIcon icon={faUser} className="icon" />
+          <div className="dropDown" onClick={handleClick}>
+            <FontAwesomeIcon icon={faBars} />
+            <FontAwesomeIcon icon={faUser} />
           </div>
+          {isShown && (
+            <div className="drop">
+              <div className="dropItem">Sign up</div>
+              <div className="dropItem">Log in</div>
+              <div className="dLine"></div>
+              <div className="dropItem">Airbnb your home</div>
+              <div className="dropItem">Help Center</div>
+            </div>
+          )}
         </div>
       </div>
       <div className="roomBody">

@@ -233,12 +233,11 @@
 /* Destination Label style starts here */
 
 .home .destinationLabel {
-  padding: 10px 60px 5px 70px;
-  /* display: flex;
+  padding: 10px 60px 15px 70px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; */
-  /* padding: 0px 50px 0px 80px; */
+  justify-content: center;
 }
 
 .home .destinationLabel button {
