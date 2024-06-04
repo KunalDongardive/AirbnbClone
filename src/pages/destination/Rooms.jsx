@@ -46,10 +46,8 @@ import { useState } from "react";
 
 const Rooms = () => {
   const [isShown, setIsShown] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
-    setIsClicked(!isClicked);
     setIsShown(!isShown);
   };
 
