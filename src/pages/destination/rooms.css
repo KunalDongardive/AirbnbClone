@@ -11,7 +11,7 @@
   justify-content: space-evenly;
   padding: 0px 150px;
   border-bottom: 1px solid rgb(223, 223, 223);
-  position: sticky;
+  position: relative;
 }
 
 .rooms .header .searchBar {
@@ -67,10 +67,6 @@
   border: 1px solid rgb(221, 220, 220);
   padding: 0.7rem 0.5rem;
   display: flex;
-  align-items: center;
-  height: auto;
-  width: auto;
-
 }
 
 .home .header .profile .dropDown > * {
@@ -111,7 +107,6 @@
 .home .header .profile .drop .dropItem:hover {
   background-color: #ddd;
 }
-
 /* .rooms .header .profile .menuIcon:hover {
   box-shadow: -1px 1px 10px -1px rgba(11, 11, 11, 0.75);
 } */
