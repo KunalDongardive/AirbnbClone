@@ -1,46 +1,85 @@
 import React from "react";
+import { useState } from "react";
+import "./signUp.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faApple } from "@fortawesome/free-brands-svg-icons";
 
 const SignUp = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [country, setCountry] = useState("India (+91)");
+  const [phoneNumber, setPhoneNumber] = useState("");
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleCountryChange = (event) => {
+    setCountry(event.target.value);
+  };
+
+  const handlePhoneNumberChange = (event) => {
+    setPhoneNumber(event.target.value);
+  };
   return (
     <div className="signUp">
-      <div className="card">
-        <div className="top">
-          <div className="left">
-            <FontAwesomeIcon icon={faXmark} />
+      {!isLoggedIn && (
+        <div className="loginContainer">
+          <div className="loginHeader">
+            <FontAwesomeIcon icon={faXmark} /> <h2>Log in or sign up</h2>
           </div>
-          <div className="right">
-            <h1>Log in or sign up</h1>
+          <div className="loginForm">
+            <div className="loginInput">
+              <label htmlFor="country">Country/Region</label>
+              <select
+                id="country"
+                value={country}
+                onChange={handleCountryChange}
+              >
+                <option value="India (+91)">India (+91)</option>
+                <option value="United States (+1)">United States (+1)</option>
+              </select>
+            </div>
+            <div className="loginInput">
+              <label htmlFor="phone">Phone number</label>
+              <input
+                type="tel"
+                id="phone"
+                value={phoneNumber}
+                onChange={handlePhoneNumberChange}
+              />
+            </div>
+            <button className="loginButton" onClick={handleLogin}>
+              Continue
+            </button>
+            <div className="line"></div>or <div className="line"></div>
+            <button className="loginButton" onClick={handleLogin}>
+              <FontAwesomeIcon icon={faSquareFacebook} />
+              Continue with Facebook
+            </button>
+            <button className="loginButton" onClick={handleLogin}>
+              <FontAwesomeIcon icon={faGoogle} />
+              Continue with Google
+            </button>
+            <button className="loginButton" onClick={handleLogin}>
+              <FontAwesomeIcon icon={faApple} /> Continue with Apple
+            </button>
+            <button className="loginButton" onClick={handleLogin}>
+              <FontAwesomeIcon icon={faEnvelope} />
+              Continue with email
+            </button>
           </div>
         </div>
-        <div className="center">
-          <form action="">
-            <legend>Welcome to Airbnb</legend>
-            <table style={{ border: "1px solid black", borderRadius: "5px" }}>
-              <tr>
-                <td>
-                  <label for="cars">Country/Region</label>
-                  <select id="cars" name="cars">
-                    <option value="volvo">India (+91)</option>
-                    <option value="saab">American Samoa (+1)</option>
-                    <option value="fiat">Australia (+61)</option>
-                    <option value="audi">Japan (+81)</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="number" placeholder="Phone number" />
-                </td>
-              </tr>
-            </table>
-          </form>
+      )}
+
+      {isLoggedIn && (
+        <div className="contentContainer">
+          {/* Content for logged-in users */}
         </div>
-        <div className="hline"></div> &nbsp; or &nbsp;
-        <div className="hline"></div>
-        <div className="bottom"></div>
-      </div>
+      )}
     </div>
   );
 };
