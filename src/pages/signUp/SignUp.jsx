@@ -29,33 +29,41 @@ const SignUp = () => {
       {!isLoggedIn && (
         <div className="loginContainer">
           <div className="loginHeader">
-            <FontAwesomeIcon icon={faXmark} /> <h2>Log in or sign up</h2>
+            <FontAwesomeIcon icon={faXmark} /> <h2>Log in or sign up</h2>{" "}
+            <p></p>
           </div>
+          <div className="line1"></div>
           <div className="loginForm">
-            <div className="loginInput">
-              <label htmlFor="country">Country/Region</label>
-              <select
-                id="country"
-                value={country}
-                onChange={handleCountryChange}
-              >
-                <option value="India (+91)">India (+91)</option>
-                <option value="United States (+1)">United States (+1)</option>
-              </select>
-            </div>
-            <div className="loginInput">
-              <label htmlFor="phone">Phone number</label>
-              <input
-                type="tel"
-                id="phone"
-                value={phoneNumber}
-                onChange={handlePhoneNumberChange}
-              />
+            <h1>Welcome to Airbnb</h1>
+            <div className="logInBox">
+              <div className="login-country">
+                <label htmlFor="country">Country/Region</label>
+                <select
+                  id="country"
+                  value={country}
+                  onChange={handleCountryChange}
+                >
+                  <option value="India (+91)">India (+91)</option>
+                  <option value="United States (+1)">United States (+1)</option>
+                </select>
+              </div>
+              <div className="login-number">
+                <input
+                  type="tel"
+                  id="phone"
+                  value={phoneNumber}
+                  onChange={handlePhoneNumberChange}
+                  placeholder="Phone Number"
+                />
+              </div>
             </div>
             <button className="loginButton" onClick={handleLogin}>
               Continue
             </button>
-            <div className="line"></div>or <div className="line"></div>
+            <div className="line2">
+              {" "}
+              <div className="line"></div>or <div className="line"></div>
+            </div>
             <button className="loginButton" onClick={handleLogin}>
               <FontAwesomeIcon icon={faSquareFacebook} />
               Continue with Facebook

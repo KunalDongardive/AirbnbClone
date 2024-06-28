@@ -2,46 +2,75 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 99vh;
   background-color: #f5f5f5;
 }
 
-.loginContainer {
+.signUp .loginContainer {
   background-color: white;
-  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 30%;
 }
 
-.loginHeader {
-  text-align: center;
-  margin-bottom: 30px;
+.signUp .loginContainer .loginHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
 }
 
-.loginForm {
+.signUp .loginContainer .line1 {
+  height: 1px;
+  background-color: rgb(236, 236, 236);
+}
+
+.signUp .loginContainer .loginForm {
   display: flex;
   flex-direction: column;
+  padding: 0px 30px;
 }
 
-.loginInput {
-  margin-bottom: 15px;
+.signUp .loginContainer .loginForm .logInBox {
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-.loginInput label {
-  margin-bottom: 5px;
-  font-weight: bold;
+.signUp .loginContainer .loginForm .login-country {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  padding: 5px;
 }
 
-.loginInput input,
-.loginInput select {
+.signUp .loginContainer .loginForm .login-country label {
+  font-size: 13px;
+  margin-left: 4px;
+}
+
+.signUp .loginContainer .loginForm .login-country select {
+  border: none;
+  background-color: inherit;
+  outline: none;
+  color: black;
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.signUp .loginContainer .loginForm .login-number {
+  padding: 5px;
+}
+
+.signUp .loginContainer .loginForm .login-number input {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  width: 97%;
+  border: none;
+  font-size: 15px;
+  font-weight: 550;
+  outline: none;
 }
 
-.loginButton {
+.signUp .loginContainer .loginForm .loginButton {
   /* background-color: #ff5a5f; */
   /* color: white; */
   padding: 12px 20px;
@@ -53,19 +82,25 @@
   margin: 10px 0px;
 }
 
-.loginButton:hover {
+.signUp .loginContainer .loginForm .loginButton:hover {
   background-color: #e74c4f;
 }
 
-.loginOr {
+.signUp .loginContainer .loginForm .loginOr {
   text-align: center;
   margin: 20px 0;
   color: #888;
 }
 
+.line2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .line {
   height: 1px;
-  width: 40%;
+  width: 45%;
   background-color: black;
 }
 
