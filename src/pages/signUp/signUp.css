@@ -32,14 +32,14 @@
 }
 
 .signUp .loginContainer .loginForm .logInBox {
-  border: 1px solid black;
-  border-radius: 5px;
+  border: 1px solid rgb(195, 195, 195);
+  border-radius: 10px;
 }
 
 .signUp .loginContainer .loginForm .login-country {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgba(189, 189, 189, 0.849);
   padding: 5px;
 }
 
@@ -52,7 +52,7 @@
   border: none;
   background-color: inherit;
   outline: none;
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 15px;
   font-weight: 550;
 }
